@@ -5,7 +5,7 @@ on:
     branches:
       - main # Runs only when merging to main
     tag:
-      - v2.* # Runs only when pushing a new tag
+      - 'v2.*' # Runs only when pushing a new tag
 
 jobs:
   release:
