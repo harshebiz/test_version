@@ -7,9 +7,10 @@
     "@semantic-release/release-notes-generator",
     { "path": "@semantic-release/npm", "npmPublish": false },
     [
-      "@semantic-release/exec",
+      "@semantic-release/git",
       {
-        "prepareCmd": "./my-build-script.sh ${nextRelease.version}"
+        "assets": ["package.json"],
+        "message": "Released version: ${nextRelease.version}"
       }
     ]
   ],
