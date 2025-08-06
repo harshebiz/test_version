@@ -31,3 +31,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Ensure GitHub token is used
         run: npx semantic-release
+
+      - name: Create and push version branch
+        if: success()
+        run: |
+           VERSION=$(node -p "require('./package.json').version")
+           echo "Version from package.json is $VERSION"
+           git config user.name "github-actions"
+           git config user.email "github-actions@github.com"
+           git checkout -b v$VERSION
+           git push origin v$VERSION
