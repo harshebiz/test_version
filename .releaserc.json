@@ -16,8 +16,8 @@
   ],
   "preset": "conventionalcommits",
   "releaseRules": [
-    { "type": "release", "release": "major" },
-    { "type": "feature", "release": "minor" },
-    { "type": "fix", "release": "patch" }
+    { "type": "Release", "release": "major" },
+    { "type": "Feature", "release": "minor" },
+    { "type": "Bug", "release": "patch" }
   ]
 }
